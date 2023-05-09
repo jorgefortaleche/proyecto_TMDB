@@ -55,11 +55,11 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.get("/secret", validateAuth, (req, res) => {
+/* router.get("/secret", validateAuth, (req, res) => {
   // si ingresa a el middelware validateAuth y no hay un token o usuario ya se corta el flujo con el return que se asigno a token o user y no entra al correr la callback
   res.send(req.user);
 });
-
+ */
 router.get("/me", validateAuth, (req, res) => {
   //paso mi middlewares por el parametro de la ruta me, lo que pasa por el metodo get tanto validateAuth como la callBack, express los considerados como middlewares, en una ruta yo puedo pasar los middleWare que crea necesarios.
 

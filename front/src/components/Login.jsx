@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
-
 import axios from "axios";
 import useInput from "../hooks/useInput";
-import { UserContext } from "../context/userContext";
+import { UserContext } from "../context/AuthContextProvider";
 import { useNavigate } from "react-router";
 
 const Login = () => {
@@ -31,7 +30,7 @@ const Login = () => {
     <div>
       <h1 className="text-center mt-5 mb-5">LOGIN</h1>
       <form className="container mb-4" onSubmit={handleSubmit}>
-        <input type="text" name="" id="" placeholder="email" {...email} />
+        <input type="text" placeholder="email" {...email} />
         <input
           type="password"
           name=""

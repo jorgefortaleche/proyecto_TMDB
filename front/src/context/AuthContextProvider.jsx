@@ -43,9 +43,9 @@ const AuthContextProvider = ({ children }) => {
     });
   };
   return (
-    <AuthContextProvider value={{ ...stateLogin, logOut, logUser }}>
+    <UserContext.Provider value={{ ...stateLogin, logOut, logUser }}>
       {children}
-    </AuthContextProvider>
+    </UserContext.Provider>
   );
 };
 export default AuthContextProvider;
