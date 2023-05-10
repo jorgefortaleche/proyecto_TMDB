@@ -21,8 +21,8 @@ const Signup = () => {
       password: password.value,
     };
     axios
-      .post("http://localhost:3000/api/users/signup", newUser)
-      .then((result) => console.log(result))
+      .post("http://localhost:5000/api/users/signup", newUser)
+      .then((result) => console.log(result.data))
       .then(navigate("/"))
       .catch((err) => console.log(err));
   };

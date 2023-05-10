@@ -17,7 +17,7 @@ const Login = () => {
       password: password.value,
     };
     axios
-      .post("http://localhost:3000/api/users/login", usuario)
+      .post("http://localhost:5000/api/users/login", usuario)
       .then((result) => result.data)
       .then((result) => {
         user.logUser(result);

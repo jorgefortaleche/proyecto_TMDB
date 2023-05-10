@@ -9,12 +9,6 @@ const Navbar = () => {
       <Link to={"/users/login"}>
         <button>Login</button>
       </Link>
-      <form>
-        <input type="text" placeholder="searh" />
-        <button class="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
     </div>
   );
 };
