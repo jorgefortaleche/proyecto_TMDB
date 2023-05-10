@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
+import { UserContext } from "../context/AuthContextProvider";
+import { useContext } from "react";
 
 const Navbar = () => {
-  return (
+  const user = useContext(UserContext);
+  return user.isAuthenticated ? (
+    <div>
+      <h3>{user.userName}</h3>
+      <button onClick={user.logOut}>LogOut</button>
+    </div>
+  ) : (
     <div className="navbar-item navbar-end">
       <Link to={"/users/signup"}>
-        <button>Singup</button>
+        <button>Signup</button>
       </Link>
       <Link to={"/users/login"}>
         <button>Login</button>

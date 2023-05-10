@@ -5,6 +5,7 @@ import Signup from "./components/Singup";
 import Login from "./components/Login";
 import MoviePoster from "./components/MoviePoster";
 import { Route, Routes } from "react-router";
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/users/login" element={<Login />}></Route>
+        <Route path="/movieInfo" element={<Card />}></Route>//!falta completar
         <Route path="/users/signup" element={<Signup />}></Route>
         <Route path="/" element={<MoviePoster />}></Route>
       </Routes>
